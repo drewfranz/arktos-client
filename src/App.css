@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.spinner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.spinner .loading-image {
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-task {
+  top: 20px;
+  right: 40px;
+}
+
+.badge-pill {
+  height: 1rem;
+}
+
+.badge {
+  padding-top: 0.20rem;
+}
+
+.task-item-sidebar-form {
+  height: 100vh;
+  background-color: rgb(240, 240, 240);
 }
