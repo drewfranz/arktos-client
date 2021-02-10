@@ -1,20 +1,17 @@
-import Loading from './Loading';
-import AuthNav from './AuthNav';
-import MainNav from './MainNav';
-import HeaderNav from './HeaderNav';
-import TaskListItem from './TaskListItem';
-import TaskItemSidebarForm from './TaskItemSidebarForm';
-
 import AddTaskModal from './AddTaskModal';
-
-
+import AuthNav from './AuthNav';
+import DeleteModal from './DeleteModal';
+import HeaderNav from './HeaderNav';
+import Loading from './Loading';
+import MainNav from './MainNav';
+import TaskListItem from './TaskListItem';
 
 export {
-    Loading,
+    AddTaskModal,
     AuthNav,
-    MainNav,
+    DeleteModal,
     HeaderNav,
-    TaskListItem,
-    TaskItemSidebarForm,
-    AddTaskModal
+    Loading,
+    MainNav,
+    TaskListItem
 };

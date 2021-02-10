@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
-    const [statusFilter, setStatusFilter] = useState('');
+    const [statusFilter, setStatusFilter] = useState('all');
     let [isLoading, setIsLoading] = useState(true);
     const { getAccessTokenSilently } = useAuth0();
 
@@ -17,11 +17,7 @@ const Tasks = () => {
         setStatusFilter(e.target.value);
 
         let newTasks = tasks.map(task => {
-            if (task.status !== e.target.value) {
-                task.isVisible = false;
-            } else {
-                task.isVisible = true;
-            }
+            task.isVisible = (task.status !== e.target.value) ? false : true;
             return task;
         });
 
@@ -41,7 +37,7 @@ const Tasks = () => {
             })
             .then(taskJson => {
                 taskJson.forEach(task => {
-                    task["isVisible"] = true;
+                    task['isVisible'] = true;
                 });
                 setTasks(taskJson);
                 setIsLoading(false);
@@ -62,6 +58,7 @@ const Tasks = () => {
             <Row>
                 <Col sm="2" className="py-2">
                     <select value={statusFilter} onChange={handleStatusOnChange}>
+                        <option value="all">- All -</option>
                         <option value="open">Open</option>
                         <option value="inProgress">In Progress</option>
                         <option value="test">Needs Review</option>

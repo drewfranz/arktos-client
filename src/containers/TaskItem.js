@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
-import { TaskItemSidebarForm } from '../components';
+import { TaskItemSidebarForm } from '../containers';
 
 
 const TaskItem = (props) => {

@@ -4,7 +4,7 @@ import { Row, Col, Container } from 'reactstrap';
 
 const Home = () => {
     return (
-        <section class="jumbotron text-center backgrount-white">
+        <section className="jumbotron text-center backgrount-white">
             <Container>
                 <Row>
                     <Col>
