@@ -5,7 +5,7 @@ import ProtectedRoute from './auth/ProtectedRoute';
 
 import { useAuth0 } from "@auth0/auth0-react";
 
-import "bootswatch/dist/lux/bootstrap.min.css";
+import "bootswatch/dist/litera/bootstrap.min.css";
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
@@ -28,6 +28,7 @@ function App() {
           <ProtectedRoute path="/add/task" exact component={AddTask} />
           <ProtectedRoute path="/task/view/:id" exact component={TaskDetail} />
           <ProtectedRoute path="/profile" exact component={Profile} />
+          }
         </Switch>
       </div>
     </>

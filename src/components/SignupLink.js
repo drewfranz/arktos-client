@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavLink} from 'reactstrap';
+import { Nav, NavItem, NavLink} from 'reactstrap';
 import { useAuth0 } from "@auth0/auth0-react";
 
 const SignupButton = () => {
@@ -11,11 +11,9 @@ const SignupButton = () => {
         });
     }
     return (
-        <>
-            <Nav>
-                <NavLink href="/signup" onClick={handleOnClick}>Signup</NavLink>
-            </Nav>
-        </>
+        <NavItem>
+            <NavLink href="/tasks" onClick={handleOnClick}>Signup</NavLink>
+        </NavItem>
         );
     };
     
